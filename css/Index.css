@@ -1,0 +1,127 @@
+:root {
+	--mainFontSize: 28px;
+	--headingFontSize: 72px;
+	--smallHeadingFontSize: 48px;
+	--btnFontSize: 20px;
+	--smallFontSize: 14px;
+}
+
+/* Styles body element to have consistent styling through document. */
+body {
+	min-width: 580px;
+	background: black;
+	font-size: var(--mainFontSize);
+}
+
+.subHeading {
+	color: #D4AF37;
+	text-align: center;
+}
+
+/* CSS Grid allows for 2d placement of objects. */
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-auto-rows: min-content;
+	grid-gap: 10px;
+}
+	
+	/* Specified ruleset to fix all h1 elements to span the whole row in a CSS grid. */
+	.grid > .headerContainer {
+		grid-column: 1 / -1;
+		grid-row: span 3;
+	}
+	
+	/* Specified ruleset to center to the middle 6 templated columns. */
+	.grid > .centered {
+		grid-column: 4 / span 6;
+		grid-row: span 5;
+		color: #D4AF37;
+	}
+
+	/* Specified ruleset to set heading font size and text alignment for h1 tags within class 'header'. */
+	.header > .headerContainer {
+		font-size: var(--headingFontSize);
+		text-align: center;
+	}
+	
+/* Container to provide 1d column layout. */
+.flexContainer {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Styles elements of class 'btn', designed for use on button elements. */
+.btn {
+	/* Size attributes */
+	width: 400px;
+	height: 200px;
+	
+	/* Style attributes */
+	font-size: var(--mainFontSize);
+	font-weight: bold;
+	color: black;
+	border: solid 5px black;
+	background: #D4AF37;							/* Default value for if the browser cannot render gradients. */
+}
+
+/* Styles to have a gold coloured font and to be underlined. */
+.or {
+	color: #D4AF37;
+	text-decoration: underline;
+}
+
+/* Container class to style a black border around outside edge. */
+.wrapper {
+	border: solid 10px black;
+	margin: 0 15px;
+}
+
+/* Styles the text 'Deal Or' to be black with a gold background. */
+.dealOr {
+	font-weight: bold;
+	color: black;
+	background: #D4AF37;							/* Default value for if the browser cannot render gradients. */
+	background: linear-gradient(#FFD700, #D4AF37); 	/* Golden linear gradient. */
+}
+
+
+/* Styles the text 'No Deal' to be gold with a black background. */
+.noDeal {
+	font-weight: bold;
+	color: #D4AF37;
+	background: black;
+	border: solid 10px #D4AF37;
+}
+
+.footer {
+	/* Size attributes */
+	width: calc(100% - 20px);
+	
+	/* Position attributes */
+	position: fixed;
+	right: 20px;
+	bottom: 0;
+}
+
+/* Styles the copyright in the footer. */
+.footer > p {
+	font-size: var(--smallFontSize);
+	margin: 10 0;
+	text-align: right;
+	color: rgba(212, 175, 55, 0.3);
+}
+
+.otherBtn {
+	margin-top: 40px;
+	width: 50%;
+	height: 128px;
+	font-size: var(--mainFontSize);
+	font-weight: bold;
+	color: black;
+	background: #D4AF37;	
+	border: none;
+	cursor: pointer;
+}

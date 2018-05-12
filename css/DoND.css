@@ -1,0 +1,65 @@
+
+
+.leftCol {
+	grid-column: 1 / 5;
+}
+
+.rightCol {
+	grid-column: 9 / 13;
+}
+
+.spaced{
+	margin-top: 150px;
+	padding: 5px 100px;
+}
+	.spaced > button{
+		color: #D4AF37;
+		border: solid 1px #D4AF37;
+		width: 100%;
+		margin: 20px 0;
+		text-align: center;
+		font-size: var(--mainFontSize);
+	}
+
+.centerCol {
+	grid-column: 5 / 9;
+}
+
+.bankOfferContainer {
+	width: 100%;
+	height: 150px;
+	background: #D4AF37;
+	font-size: var(--smallHeadingFontSize);
+	font-weight: bold;
+}
+
+.buttonWrapper {
+	margin-top: 150px;
+	width: 100%;
+	height: 100px;
+	background: #D4AF37;
+}
+	.buttonWrapper > button {
+		float: left;
+		
+		/* Size attributes */
+		width: 50%;
+		height: 100px;
+		
+		/* Style attributes */
+		font-size: var(--btnFontSize);
+		font-weight: bold;
+		color: black;
+		border: solid 5px black;
+		background: #D4AF37;							/* Default value for if the browser cannot render gradients. */
+	}
+	
+.true {
+	background: none;
+	height: 32px;
+}
+
+.false {
+	background: #D4AF37;
+	height: 32px;
+}
